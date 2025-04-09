@@ -8,43 +8,33 @@ driver.get("https://www.topcv.vn/viec-lam/nhan-vien-kinh-doanh-sales-tu-van-noi-
 
 # Đợi tiêu đề hiển thị
 wait = WebDriverWait(driver, 10)
-title = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".job-detail__info--title"))).text
 
 # Thu thập thông tin
 title = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.job-detail__info--title"))).text
 salary = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(1) .job-detail__info--section-content-value").text
-location = driver.find_element(By.XPATH, ".job-detail__info--section:nth-child(2) .job-detail__info--section-content-value").text
-# experience = driver.find_element(By.XPATH, "//div[@class='box-main']//div[contains(text(), 'Kinh nghiệm')]/following-sibling::strong").text
-# deadline = driver.find_element(By.XPATH, "//div[@class='box-main']//div[contains(text(), 'Hạn nộp hồ sơ')]/following-sibling::strong").text
+location = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(2) .job-detail__info--section-content-value").text
+experience = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(3) .job-detail__info--section-content-value").text
+deadline = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--deadline").text
 #
-# company_name = driver.find_element(By.CSS_SELECTOR, ".box-company h3").text
-# industry = driver.find_element(By.XPATH, "//div[contains(text(), 'Lĩnh vực')]/following-sibling::div").text
-# work_type = driver.find_element(By.XPATH, "//div[contains(text(), 'Hình thức làm việc')]/following-sibling::div").text
-# education = driver.find_element(By.XPATH, "//div[contains(text(), 'Học vấn')]/following-sibling::div").text
-# position = driver.find_element(By.XPATH, "//div[contains(text(), 'Cấp bậc')]/following-sibling::div").text
-# num_hiring = driver.find_element(By.XPATH, "//div[contains(text(), 'Số lượng tuyển')]/following-sibling::div").text
-#
-# job_description = driver.find_element(By.XPATH, "//h3[contains(text(), 'Mô tả công việc')]/following-sibling::div").text
-# requirements = driver.find_element(By.XPATH, "//h3[contains(text(), 'Yêu cầu ứng viên')]/following-sibling::div").text
+company_name = driver.find_element(By.CSS_SELECTOR, ".company-name-label").text
+
+job_description = driver.find_element(By.CSS_SELECTOR, ".job-description__item:nth-child(1) .job-description__item--content").text
+requirements = driver.find_element(By.CSS_SELECTOR, ".job-description__item:nth-child(2) .job-description__item--content").text
 
 # Danh sách ngành nghề liên quan
-# tags = driver.find_elements(By.CSS_SELECTOR, ".box-related-career .tag")
-# career_tags = [tag.text for tag in tags]
+tags = driver.find_elements(By.CSS_SELECTOR, ".box-category-tags > .box-category-tag")
+career_tags = [tag.text for tag in tags]
 
 # In kết quả
 print("Tiêu đề:", title)
 print("Lương:", salary)
-# print("Địa điểm:", location)
-# print("Kinh nghiệm:", experience)
-# print("Hạn nộp:", deadline)
-# print("Công ty:", company_name)
-# print("Ngành nghề:", industry)
-# print("Hình thức:", work_type)
-# print("Học vấn:", education)
-# print("Cấp bậc:", position)
-# print("Số lượng:", num_hiring)
-# print("Mô tả công việc:\n", job_description)
-# print("Yêu cầu ứng viên:\n", requirements)
-# print("Ngành nghề liên quan:", career_tags)
+print("Địa điểm:", location)
+print("Kinh nghiệm:", experience)
+print("Hạn nộp:", deadline)
+print("Công ty:", company_name)
+
+print("Mô tả công việc:\n", job_description)
+print("Yêu cầu ứng viên:\n", requirements)
+print("Ngành nghề liên quan:", career_tags)
 
 driver.quit()

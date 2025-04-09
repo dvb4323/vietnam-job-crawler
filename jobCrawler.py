@@ -1,3 +1,5 @@
+import os
+import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -7,54 +9,51 @@ from selenium.webdriver.chrome.options import Options
 
 # Cấu hình trình duyệt
 chrome_options = Options()
-# chrome_options.add_argument("--headless")  # không hiển thị trình duyệt
+# chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
-
-service = Service()  # Cấu hình path tới chromedriver nếu cần
+service = Service()
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # URL cụ thể
 url = "https://www.topcv.vn/viec-lam/nhan-vien-kinh-doanh-sales-tu-van-noi-that-thu-nhap-upto-30-trieu-thang/1651788.html"
 driver.get(url)
 
-# Đợi các phần tử chính xuất hiện
 wait = WebDriverWait(driver, 10)
 
-# Thu thập thông tin
+# Thu thập dữ liệu
 title = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.job-detail__info--title"))).text
-salary = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section-content-value").text
-location = driver.find_element(By.XPATH, "//div[@class='box-main']//div[contains(text(), 'Địa điểm')]/following-sibling::strong").text
-experience = driver.find_element(By.XPATH, "//div[@class='box-main']//div[contains(text(), 'Kinh nghiệm')]/following-sibling::strong").text
-deadline = driver.find_element(By.XPATH, "//div[@class='box-main']//div[contains(text(), 'Hạn nộp hồ sơ')]/following-sibling::strong").text
-
-company_name = driver.find_element(By.CSS_SELECTOR, ".box-company h3").text
-industry = driver.find_element(By.XPATH, "//div[contains(text(), 'Lĩnh vực')]/following-sibling::div").text
-work_type = driver.find_element(By.XPATH, "//div[contains(text(), 'Hình thức làm việc')]/following-sibling::div").text
-education = driver.find_element(By.XPATH, "//div[contains(text(), 'Học vấn')]/following-sibling::div").text
-position = driver.find_element(By.XPATH, "//div[contains(text(), 'Cấp bậc')]/following-sibling::div").text
-num_hiring = driver.find_element(By.XPATH, "//div[contains(text(), 'Số lượng tuyển')]/following-sibling::div").text
-
-job_description = driver.find_element(By.XPATH, "//h3[contains(text(), 'Mô tả công việc')]/following-sibling::div").text
-requirements = driver.find_element(By.XPATH, "//h3[contains(text(), 'Yêu cầu ứng viên')]/following-sibling::div").text
-
-# Danh sách ngành nghề liên quan
-tags = driver.find_elements(By.CSS_SELECTOR, ".box-related-career .tag")
+salary = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(1) .job-detail__info--section-content-value").text
+location = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(2) .job-detail__info--section-content-value").text
+experience = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--section:nth-child(3) .job-detail__info--section-content-value").text
+deadline = driver.find_element(By.CSS_SELECTOR, ".job-detail__info--deadline").text
+company_name = driver.find_element(By.CSS_SELECTOR, ".company-name-label").text
+job_description = driver.find_element(By.CSS_SELECTOR, ".job-description__item:nth-child(1) .job-description__item--content").text
+requirements = driver.find_element(By.CSS_SELECTOR, ".job-description__item:nth-child(2) .job-description__item--content").text
+tags = driver.find_elements(By.CSS_SELECTOR, ".box-category-tags > .box-category-tag")
 career_tags = [tag.text for tag in tags]
 
-# In kết quả
-print("Tiêu đề:", title)
-print("Lương:", salary)
-print("Địa điểm:", location)
-print("Kinh nghiệm:", experience)
-print("Hạn nộp:", deadline)
-print("Công ty:", company_name)
-print("Ngành nghề:", industry)
-print("Hình thức:", work_type)
-print("Học vấn:", education)
-print("Cấp bậc:", position)
-print("Số lượng:", num_hiring)
-print("Mô tả công việc:\n", job_description)
-print("Yêu cầu ứng viên:\n", requirements)
-print("Ngành nghề liên quan:", career_tags)
-
 driver.quit()
+
+# Tạo đối tượng dữ liệu
+job_data = {
+    "url": url,
+    "title": title,
+    "salary": salary,
+    "location": location,
+    "experience": experience,
+    "deadline": deadline,
+    "company_name": company_name,
+    "job_description": job_description,
+    "requirements": requirements,
+    "career_tags": career_tags
+}
+
+# Lưu vào file JSON
+os.makedirs("raw_data", exist_ok=True)
+job_id = url.split("/")[-1].split("?")[0].split(".")[0]  # Lấy ID job từ URL
+file_path = os.path.join("raw_data", f"{job_id}.json")
+
+with open(file_path, "w", encoding="utf-8") as f:
+    json.dump(job_data, f, ensure_ascii=False, indent=2)
+
+print(f"✅ Đã lưu dữ liệu vào {file_path}")
