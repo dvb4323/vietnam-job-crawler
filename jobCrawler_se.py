@@ -15,7 +15,7 @@ service = Service()
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # URL cụ thể
-url = "https://www.topcv.vn/viec-lam/nhan-vien-kinh-doanh-sales-tu-van-noi-that-thu-nhap-upto-30-trieu-thang/1651788.html"
+url = "https://www.topcv.vn/viec-lam/nhan-vien-tu-van-tuyen-sinh-education-consultant-thu-nhap-upto-20-trieu/1708433.html"
 driver.get(url)
 
 wait = WebDriverWait(driver, 10)
