@@ -15,7 +15,7 @@ service = Service()
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # URL cụ thể
-url = "https://www.topcv.vn/viec-lam/nhan-vien-tu-van-tuyen-sinh-education-consultant-thu-nhap-upto-20-trieu/1708433.html"
+url = "https://www.topcv.vn/viec-lam/nhan-vien-kinh-doanh-sales-tu-van-thiet-bi-phan-tich-y-te-sinh-hoc/1718633.html?ta_source=BoxFeatureJob_LinkDetail"
 driver.get(url)
 
 wait = WebDriverWait(driver, 10)
@@ -49,9 +49,9 @@ job_data = {
 }
 
 # Lưu vào file JSON
-os.makedirs("raw_data", exist_ok=True)
+os.makedirs("../raw_data", exist_ok=True)
 job_id = url.split("/")[-1].split("?")[0].split(".")[0]  # Lấy ID job từ URL
-file_path = os.path.join("raw_data", f"{job_id}.json")
+file_path = os.path.join("../raw_data", f"{job_id}.json")
 
 with open(file_path, "w", encoding="utf-8") as f:
     json.dump(job_data, f, ensure_ascii=False, indent=2)
