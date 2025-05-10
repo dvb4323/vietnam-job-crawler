@@ -1,0 +1,25 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/senior-system-engineer-linux-networking/1684053.html?ta_source=JobSearchList_LinkDetail&u_sr_id=HoJh8tvmNbzCmEcMExJsxJm1rld7tceJPyhVL9NP_1746637784",
+  "title": "Senior System Engineer (Linux, Networking)",
+  "salary": "1,000 - 1,600 USD",
+  "location": "Hà Nội",
+  "experience": "5 năm",
+  "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ VÀ TRUYỀN THÔNG AWING VIỆT NAM",
+  "job_description": "Vận hành hệ thống server vật lý, ảo hóa, các dịch vụ có sẵn tại DC\nTham gia thiết kế và triển khai hệ thống ảo hóa mới dùng cho nội bộ công ty\nCài đặt, triển khai, hoặc tự xây dựng các công cụ để tăng hiệu quả công việc\nNghiên cứu, đánh giá và đưa các phương án để tăng cường tính bảo mật cho các dịch vụ\nTham gia xây dựng tài liệu thiết kế hệ thống, tài liệu vận hành, đào tạo chuyển giao công nghệ\nHỗ trợ các bộ phận khác, các đối tác khác trong việc triển khai dịch vụ wi-fi marketing",
+  "requirements": "Có ít nhất 5 năm kinh nghiệm tại vị trí tương đương.\nKiến thức tốt, vững vàng về networking (bắt buộc)\nHiểu biết tốt về HĐH Linux. Có kinh nghiệm trong việc cài đặt, vận hành và khắc phục sự cố đối với các dịch vụ trong môi trường Linux (bắt buộc)\nCó kinh nghiệm trong việc cài đặt và vận hành hệ thống on-premise Kubernetes (bắt buộc)\nCó hiểu biết về các công cụ như Ansible và Terraform là một lợi thế\nCó kinh nghiệm trong linh vực bảo mật, có các chứng chỉ liên quan về system engineer là một lợi thế",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "IT Infrastructure and Operations",
+    "System Engineer",
+    "Việc làm IT",
+    "Hệ Điều Hành Linux (centos, Rhel, Ubuntu)",
+    "Mạng Máy Tính (tcp Ip, Routing, Switching, Firewalls)",
+    "Quản Trị Hệ Thống Linux (tính Khả Dụng Cao, Giám Sát, Bảo Mật)",
+    "Tự Động Hóa (ansible, Puppet, Chef, Saltstack)",
+    "Kiến Thức Về Container (docker, Kubernetes)",
+    "Quản Lý Dự Án",
+    "Cloud Computing (aws, Azure, Gcp)",
+    "An Ninh Mạng (cybersecurity)",
+    "Kiến Thức Về Bảo Mật Mạng (ids Ips, Siem)"
+  ]
+}

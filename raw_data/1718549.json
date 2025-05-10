@@ -1,0 +1,21 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/ky-su-van-hanh-va-phat-trien-devops-engineer/1718549.html?ta_source=JobSearchList_LinkDetail&u_sr_id=G0QSeAlC649aTy1xO3u9WdPkOkZBldhYFCqJuhYT_1746642154",
+  "title": "Kỹ Sư Vận Hành Và Phát Triển (Devops Engineer)",
+  "salary": "Thoả thuận",
+  "location": "Hà Nội",
+  "experience": "5 năm",
+  "company_name": "CÔNG TY CỔ PHẦN THƯƠNG MẠI & DỊCH VỤ MEDLATEC GROUP",
+  "job_description": "Xây dựng và duy trì hệ thống CI/CD để đảm bảo quá trình triển khai phần mềm diễn ra liên tục, nhanh chóng, ổn định;\nTối ưu hóa hiệu suất hệ thống, ứng dụng, đảm bảo hệ thống luôn sẵn sàng hoạt động;\nQuản lý, vận hành và giám sát các dịch vụ cloud như AWS, Azure hoặc GCP;\nTự động hóa các quy trình quản lý hệ thống, giúp giảm thiểu thời gian và công sức của đội ngũ vận hành;\nPhối hợp chặt chẽ với các nhóm phát triển để triển khai, cải tiến hạ tầng phù hợp với nhu cầu phần mềm.",
+  "requirements": "Có khả năng làm việc với công cụ Microservices: Docker, K8s, Elastic Container Service (ECS), Elastic Kubernetes Service (EKS)...\nCó khả năng sử dụng 1 trong số công cụ CI/CD: Jenkins, Code pipeline, Code Build, CloudFormation, Terraform, Chef...\nCó khả năng quản trị vận hành các nền tảng DB như Postgresql, MS SQL, Mysql, Oracle, MongoDB,...\nCó kỹ năng triển khai service trên các OS như Windows, Linux...\nCó hiểu biết về lập trình cơ bản về NodeJS, .NET, Java, Python...\nCó kinh nghiệm làm việc với các hệ thống monitor: ELK, Protheus, Zabbix, APM...\nCó kinh nghiệm làm việc về hệ thống cloud: AWS, Google Cloud, Azure,...\nCó kinh nghiệm làm việc với các web server phổ biến như Nginx, Apache, IIS, Tomcat\nTrực tiếp tham gia lập trình, nâng cấp các tính năng dịch vụ của hệ thống.\nYêu thích, có niềm đam mê lĩnh vực nghiên cứu phát triển CNTT, Devops\nĐọc hiểu tài liệu tiếng Anh tốt",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "IT Infrastructure and Operations",
+    "DevOps Engineer",
+    "Việc làm IT",
+    "Git",
+    "Docker",
+    "Kubernetes",
+    "Ci Cd (jenkins, Gitlab Ci, Circleci, Etc.)",
+    "Linux/Unix"
+  ]
+}

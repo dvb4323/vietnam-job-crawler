@@ -1,0 +1,16 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/qa-engineer-hcm/1703305.html?ta_source=JobSearchList_LinkDetail&u_sr_id=OS9VufftLczzDVo8GqB6uepLRb9rMcycb73yHKaY_1746640123",
+  "title": "QA Engineer - HCM",
+  "salary": "Thoả thuận",
+  "location": "Hồ Chí Minh",
+  "experience": "Không yêu cầu",
+  "company_name": "CÔNG TY TNHH PHÁT TRIỂN HỆ THỐNG NICHIETSU",
+  "job_description": "Full QA process ownership (write a ticket > design & estimate > implement > deliver )\nParticipation in design meetings to advocate for the QA perspective.\nDetailed bug tickets (reproduction steps, tech details, stack traces)\nPunch IN OUT during work day\nBe available via slack during work day\nEach product, module , feature should be qa covered\nPass every Performance review\nMaintenance of ci/cd pipelines",
+  "requirements": "We are looking for an experienced QA engineer that is able to learn by himself, a good team\nplayer with a fluent English, and a deep knowledge of WEB-related technologies. Main\nprogramming language should be python, knowledge of JS and \\ or GO is a good bonus.\nMinimum set of required technologies \\ tools:\nWEB-related techs (HTTP requests \\ responses, security related topics like CORS)\nAny experience with hardware vendors is a big bonus.\nSelenium \\ Cucumber (behave)\nCI\\CD (Azure DevOps \\ Github Actions \\ Gitlab)\nPytest \\ TestNg\nKubernetes (Define pod \\ start pod \\ modify pod)\nLoad testing (e.g. Locust)\nPentesting (metasploit) - Bonus\nLinux Configuration \\ Operation\nAWS \\ Azure\nSQL queries proficient\nObservability tools - any of Grafana stack, OpenTelemetry, Prometheus, Splunk, Jaeger, Zipkin,\nElastic, AWS X-Ray, etc.",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "Software Testing",
+    "QA Engineer",
+    "Việc làm IT"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/giam-sat-an-ninh-mang-soc-tier-2/1544291.html?ta_source=JobSearchList_LinkDetail&u_sr_id=tY9nQ0GeIjzfk7N6faKtnvlk8tWiMYIeBn2Swqmd_1746641872",
+  "title": "Giám Sát An Ninh Mạng (SOC Tier 2)",
+  "salary": "Thoả thuận",
+  "location": "Hà Nội",
+  "experience": "1 năm",
+  "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ AN NINH MẠNG QUỐC GIA VIỆT NAM",
+  "job_description": "Giám sát hệ thống, nhận thông tin cảnh báo của hệ thống theo thời gian thực.\nĐọc và phân tích sơ bộ nhật ký (log) của các hệ thống: tường lửa, switch, máy chủ, ứng dụng …\nChuyển thông tin trạng thái các cảnh báo nhận từ hệ thống (nhận định cảnh báo thật giả).\nGiám sát bảo mật thông qua các luồng sự kiện Event, Flows, bảng điểu khiển Dashboard và các cảnh báo an ninh.\nPhân tích sâu các sự cố bảo mật để xác định nguyên nhân và phạm vi ảnh hưởng.\nThực hiện threat hunting để phát hiện các hoạt động đáng ngờ trong hệ thống.\nĐưa ra những mối đe dọa chưa rõ lên chuyên viên phân tích hoặc trưởng bộ phận khi cần thiết.\nHỗ trợ và hướng dẫn các nhân viên Tier 1 trong quá trình phân tích và xử lý sự cố.\nTham gia xây dựng và cập nhật playbook, runbook cho SOC.\nThực hiện các nhiệm vụ khác được Công ty giao\nHoàn thành tốt các nhiệm vụ",
+  "requirements": "Tốt nghiệp Cao đẳng trở lên, chuyên ngành: CNTT, An toàn thông tin, Toán tin hoặc các chuyên ngành khác có liên quan.\nTừ 1 năm kinh nghiệm SOC Tier 2. Hiểu biết về an toàn thông tin. Đã từng tham gia ứng phó sự cố\nƯu tiên ứng viên hiểu rõ về hệ điều hành, thiết bị mạng, nền tảng TCP/IP.\nƯu tiên ứng viên có chứng chỉ liên quan đến lĩnh vực an ninh mạng: CEH, CHFI, Security+, …\nĐam mê và định hướng theo An toàn thông tin lâu dài/chuyên sâu.\nƯu tiên ứng viên có khả năng đọc hiểu tài liệu tiếng Anh là 1 lợi thế",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "Information Security",
+    "Phòng chống lừa đảo và an ninh mạng",
+    "Việc làm IT",
+    "Kiểm Soát An Ninh",
+    "Giám sát camera",
+    "Phát Hiện Và Xử Lý Sự Cố",
+    "Báo Cáo Sự Việc",
+    "Sử Dụng Các Công Cụ Giám Sát Bảo Mật (security Monitoring Tools)"
+  ]
+}

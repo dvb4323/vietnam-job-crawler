@@ -1,0 +1,16 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/cloud-system-engineer-gcp/1705395.html?ta_source=JobSearchList_LinkDetail&u_sr_id=pOfzrKoDorLybQqMW3cKAV5zcvBwI7SCRJvquO59_1746636877",
+  "title": "Cloud System Engineer (GCP)",
+  "salary": "Thoả thuận",
+  "location": "Hà Nội",
+  "experience": "1 năm",
+  "company_name": "Công Ty TNHH LG CNS VIỆT NAM",
+  "job_description": "Infrastructure Management: Deploy and manage the cloud infrastructure on Google Cloud Platform (GCP) including services like Compute Engine, Cloud Storage, Cloud VPC, Cloud SQL, and Google Kubernetes Engine (GKE).\nAutomation: Implement automation of cloud infrastructure provisioning and management using Terraform, Google Cloud Deployment Manager, and Cloud SDK.\nMonitoring & Optimization: Monitor cloud infrastructure health and performance using Google Cloud Monitoring and Stackdriver, and perform ongoing performance tuning to ensure optimal resource usage and cost efficiency.\nSecurity & Compliance: Enforce best practices in cloud security, including identity and access management (IAM), encryption, and network security to ensure data protection and compliance.\nIncident Management: Troubleshoot and resolve infrastructure-related incidents, ensuring minimal downtime and providing root cause analysis.\nCost Management: Utilize GCP tools and reports to manage cloud costs and optimize usage, ensuring the infrastructure is running efficiently and cost-effectively.\nDocumentation: Maintain clear and detailed documentation for infrastructure setups, processes, and troubleshooting guidelines to support ongoing operations and future scaling\nOS: Have experience in upgrading OS, managing service running on Serve",
+  "requirements": "[Required]\nGraduated from University, Information Technology major or related\nHave at least 1 year of experience in System Administrattion or Cloud Administrator\n[Preferred]\nExperience with managing cloud infrastructure on Google Cloud Platform (GCP), including services like Compute Engine, Cloud Storage, VPC, GKE, and Cloud SQL.\nProficient in Infrastructure-as-Code (IaC) tools like Terraform, Google Cloud Deployment Manager, or equivalent.\nFamiliarity with CI/CD pipelines and integrating infrastructure management into DevOps practices.\nStrong scripting skills in languages like Bash, Python, or Go for automation tasks.\nExperience with backup, recovery, and disaster recovery strategies in a cloud environment.",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "IT Infrastructure and Operations",
+    "System Administrator",
+    "Việc làm IT"
+  ]
+}

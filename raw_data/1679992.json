@@ -1,0 +1,21 @@
+{
+  "url": "https://www.topcv.vn/viec-lam/backend-developer/1679992.html?ta_source=JobSearchList_LinkDetail&u_sr_id=tY9nQ0GeIjzfk7N6faKtnvlk8tWiMYIeBn2Swqmd_1746641732",
+  "title": "Backend Developer",
+  "salary": "18 - 35 triệu",
+  "location": "Hà Nội",
+  "experience": "3 năm",
+  "company_name": "Công ty TNHH GASY",
+  "job_description": "Phát triển, tối ưu và bảo trì hệ thống backend của các dự án.\nXây dựng và triển khai các API phục vụ các ứng dụng web và mobile.\nThiết kế và tối ưu cơ sở dữ liệu để đảm bảo hiệu suất và khả năng mở rộng.\nLàm việc với các dịch vụ AWS, Google Cloud để triển khai hệ thống.\nTích hợp các công nghệ realtime như WebSocket, Socket.io.\nPhát triển và tối ưu hệ thống theo mô hình Microservices.\nTìm kiếm, đánh giá và điều chỉnh các thư viện bên ngoài để phù hợp với yêu cầu dự án.\nPhân tích, xử lý dữ liệu lớn, tối ưu truy vấn và request tới database.\nQuản lý vòng đời của class, hằng số trong JavaScript.\nLàm việc với hệ thống Linux, Docker, Docker Compose.",
+  "requirements": "- Từ 3 năm kinh nghiệm\n- Thành thạo với các framework Notejs, Nestjs, Python flask, Python Dijango.\n- Thành thạo làm việc với hệ cơ sở dữ liệu SQL, MySQL, MariaDB, MongoDB....\n- Kinh nghiệm làm việc với các service aws, google.\n- Kinh nghiệm làm việc với websocket, socket.io\n- Kinh nghiệm với microservice.\n- Nhạy bén trong việc tìm kiếm, sử dụng, đánh giá hiệu năng của các thư viện bên ngoài. Khả năng đọc sâu code của thư viện có thể sửa lib để đáp ứng yêu cầu dự án.\n- Nắm chắc vòng đời của class, hằng số trong JS.\n- Kinh nghiệm xử lý đa luồng, đơn luồng trong Python.\n- Kinh nghiệm xứ lý dữ liệu lớn tới BE và database. Tối ưu request tới database.\n- Thành thạo các framework TypeORM, Prisma, Knex… và viết raw query cho truy vấn database.\n- Thành thạo sử dụng Redis, FTP, S3, Minio…\n- Kinh nghiệm docker, docker-compose, server linux, ubuntu là một lợi thế.\n- Có kinh nghiệm Frontend là một lợi thế.",
+  "career_tags": [
+    "Công nghệ Thông tin",
+    "Software Engineering",
+    "Backend Developer",
+    "Việc làm IT",
+    "API RESTful",
+    "Kiến Trúc Phần Mềm",
+    "Cơ Sở Dữ Liệu (sql, Nosql)",
+    "Kiểm Thử Phần Mềm (unit Testing, Integration Testing)",
+    "Ngôn Ngữ Lập Trình (java, Python, Node.js, Php, Ruby, Go, V.v.)"
+  ]
+}
