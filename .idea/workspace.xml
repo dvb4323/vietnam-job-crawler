@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2db17ce-e16d-44a6-adf0-0cd7cefaf2da" name="Changes" comment="Update crawler for Url">
+      <change afterPath="$PROJECT_DIR$/scripts/crawl_job_details_single_thread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/proxies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawled_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/crawled_jobs.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +222,7 @@
       <workItem from="1746633277120" duration="13048000" />
       <workItem from="1746719394601" duration="10043000" />
       <workItem from="1746804197226" duration="2038000" />
-      <workItem from="1746843164174" duration="35110000" />
+      <workItem from="1746843164174" duration="42470000" />
     </task>
     <task id="LOCAL-00001" summary="Update crawler for Url">
       <option name="closed" value="true" />
