@@ -8,6 +8,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver as uc
+from captcha_handle import check_for_captcha
 
 def human_scroll(driver, scroll_pause=1.0):
     scroll_height = driver.execute_script("return document.body.scrollHeight")
@@ -18,21 +19,56 @@ def human_scroll(driver, scroll_pause=1.0):
         driver.execute_script(f"window.scrollTo(0, {current_height});")
         time.sleep(scroll_pause)
 
+
 def random_sleep(min_sec=1, max_sec=2):
     time.sleep(random.uniform(min_sec, max_sec))
+
 
 def init_driver():
     chrome_options = uc.ChromeOptions()
     chrome_options.add_argument("--disable-blink-features=AutomationControlled")
     chrome_options.add_argument("start-maximized")
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.71 Safari/537.36")
+    chrome_options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.6099.71 Safari/537.36")
     chrome_options.add_argument("--disable-popup-blocking")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--ignore-certificate-errors")
     driver = uc.Chrome(options=chrome_options)
     return driver
 
-def crawl_urls(base_url, max_pages=50):
+
+def save_urls_to_file(urls, filepath):
+    """
+    Lưu danh sách URLs vào file với xử lý tạo thư mục nếu chưa tồn tại
+
+    Args:
+        urls (list): Danh sách URLs cần lưu
+        filepath (str): Đường dẫn đầy đủ đến file
+    """
+    # Đảm bảo thư mục tồn tại
+    directory = os.path.dirname(filepath)
+
+    # Tạo thư mục nếu chưa tồn tại (bao gồm cả thư mục con)
+    if directory and not os.path.exists(directory):
+        try:
+            os.makedirs(directory)
+            print(f"✅ Đã tạo thư mục: {directory}")
+        except Exception as e:
+            print(f"❌ Không thể tạo thư mục {directory}: {e}")
+            return False
+
+    # Lưu URLs vào file
+    try:
+        with open(filepath, "w", encoding="utf-8") as f:
+            for url in urls:
+                f.write(url + "\n")
+        return True
+    except Exception as e:
+        print(f"❌ Lỗi khi lưu file {filepath}: {e}")
+        return False
+
+
+def crawl_urls(base_url, max_pages=50, output_path=None):
     driver = init_driver()
     wait = WebDriverWait(driver, 20)
 
@@ -60,12 +96,18 @@ def crawl_urls(base_url, max_pages=50):
             random_sleep(2, 3)
 
             # Kiểm tra CAPTCHA thông qua iframe chứa Google reCAPTCHA
-            try:
-                captcha_frame = driver.find_element(By.CSS_SELECTOR, "iframe[src*='recaptcha']")
-                print(f"🚨 CAPTCHA phát hiện trên trang {page}.")
-                input("🔓 Vui lòng xử lý CAPTCHA thủ công, sau đó nhấn Enter để tiếp tục...")
-            except NoSuchElementException:
-                pass  # Không có CAPTCHA, tiếp tục bình thường
+            # try:
+            #     captcha_frame = driver.find_element(By.CSS_SELECTOR, "iframe[src*='recaptcha']")
+            #     print(f"🚨 CAPTCHA phát hiện trên trang {page}.")
+            #     input("🔓 Vui lòng xử lý CAPTCHA thủ công, sau đó nhấn Enter để tiếp tục...")
+            # except NoSuchElementException:
+            #     pass  # Không có CAPTCHA, tiếp tục bình thường
+
+            # Xử lý CAPTCHA với hàm nâng cao
+            if not check_for_captcha(driver, page):
+                print(f"⚠️ Không thể xử lý CAPTCHA trên trang {page}, thử trang tiếp theo")
+                page += 1
+                continue
 
             human_scroll(driver)
             # ActionChains(driver).move_by_offset(random.randint(0, 150), random.randint(0, 150)).perform()
@@ -115,17 +157,41 @@ def crawl_urls(base_url, max_pages=50):
 
     # Lưu kết quả
     print(f"\n📦 Tổng số URL thu thập được: {len(job_urls)}")
+
     if job_urls:
-        today = datetime.today().strftime("%Y-%m-%d")
-        os.makedirs("../job_urls", exist_ok=True)
-        filename = f"job_urls/topcv_{today}.txt"
-        with open(filename, "w", encoding="utf-8") as f:
-            for url in job_urls:
-                f.write(url + "\n")
-        print(f"✅ Đã lưu vào '{filename}'")
+        # Xác định đường dẫn file đầu ra
+        if output_path is None:
+            today = datetime.today().strftime("%Y-%m-%d")
+            # Sử dụng đường dẫn tuyệt đối từ thư mục hiện tại
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            parent_dir = os.path.dirname(current_dir)
+            output_dir = os.path.join(parent_dir, "job_urls")
+            output_path = os.path.join(output_dir, f"topcv_{today}.txt")
+
+        # Lưu URLs vào file
+        success = save_urls_to_file(job_urls, output_path)
+        if success:
+            print(f"✅ Đã lưu {len(job_urls)} URLs vào '{output_path}'")
+        else:
+            print(f"❌ Không thể lưu URLs vào '{output_path}'")
     else:
         print("⚠️ Không có URL nào được lưu.")
 
+    return job_urls
+
+
 if __name__ == "__main__":
     BASE_URL = "https://www.topcv.vn/tim-viec-lam-moi-nhat?type_keyword=0&sba=1"
-    crawl_urls(BASE_URL, max_pages=200)
+
+    # Lấy đường dẫn tuyệt đối của thư mục hiện tại
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Tạo đường dẫn đến thư mục job_urls (cùng cấp với thư mục scripts)
+    parent_dir = os.path.dirname(current_dir)
+
+    # Tạo tên file
+    today = datetime.today().strftime("%Y-%m-%d")
+    output_file = os.path.join(parent_dir, "job_urls", f"topcv_{today}.txt")
+
+    # Crawl và lưu URLs
+    crawl_urls(BASE_URL, max_pages=200, output_path=output_file)

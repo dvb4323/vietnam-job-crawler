@@ -1,2 +1,39 @@
 ## topcv.vn
 Crawl data bằng Selenium đối với từng job lẻ
+
+Giai đoạn 1: Thu thập dữ liệu
+Crawl dữ liệu từ các trang tuyển dụng (TopCV, VietnamWorks, ITviec,...).
+
+Lưu vào file JSON hoặc MongoDB/PostgreSQL.
+
+Lưu ý: nên crawl thêm các tag, kỹ năng, mô tả chi tiết.
+
+🧹 Giai đoạn 2: Xử lý dữ liệu (ETL)
+Làm sạch văn bản: loại bỏ HTML, xuống dòng, ký tự đặc biệt.
+
+Dùng NLP để trích xuất kỹ năng từ mô tả (VD: spaCy, PyVi, hoặc regex tùy chọn).
+
+Chuẩn hoá các kỹ năng: React.js, ReactJS, react js → React.
+
+📊 Giai đoạn 3: Phân tích dữ liệu
+Thống kê kỹ năng phổ biến theo ngành/nghề.
+
+Phân cụm công việc theo kỹ năng (dùng KMeans hoặc cosine similarity).
+
+Xây dựng mạng lưới kỹ năng (graph skill → liên kết các kỹ năng thường xuất hiện cùng nhau).
+
+(Tùy chọn) Dự đoán xu hướng kỹ năng theo thời gian.
+
+🤖 Giai đoạn 4: Gợi ý kỹ năng và lộ trình
+Gợi ý kỹ năng cần học cho sinh viên theo nghề nghiệp mong muốn.
+
+Sắp xếp kỹ năng theo độ phổ biến, mức độ cơ bản → nâng cao.
+
+🌐 Giai đoạn 5: Hiển thị kết quả
+Dùng Streamlit / Flask / Notebook để demo:
+
+Nhập vị trí → Gợi ý kỹ năng
+
+Dashboard thể hiện xu hướng
+
+Biểu đồ mạng kỹ năng
